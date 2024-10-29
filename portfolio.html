@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Kingori's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white; /* Text color */
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg1M3wwfDF8c2VhcmNofDJ8fGJhY2tncm91bmR8ZW58MHx8fHwxNjg5NjQ2NTI3&ixlib=rb-1.2.1&q=80&w=1920') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            color: gold; /* Heading color */
+            font-size: 3em;
+            margin: 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        header h2 {
+            color: gold; /* Subheading color */
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .marquee {
+            background-color: rgba(0, 0, 0, 0.8); /* Background for marquee */
+            color: gold;
+            padding: 10px;
+            font-size: 1.2em;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .marquee p {
+            display: inline-block;
+            animation: marqueeAnimation 15s linear infinite;
+            margin: 0;
+        }
+
+        @keyframes marqueeAnimation {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .nav-buttons {
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: gold; /* Button color */
+            color: black; /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ffcc00; /* Hover effect for button */
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h2 {
+            color: gold; /* Section title color */
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Space between cards */
+            padding: 20px;
+        }
+
+        .card {
+            background-color: rgba(30, 30, 30, 0.8); /* Card background */
+            border: 1px solid gold; /* Card border color */
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Shadow for 3D effect */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: gold; /* Button color */
+            color: black; /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffcc00; /* Hover effect for button */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        footer p {
+            color: gold; /* Footer text color */
+        }
+
+        .nav-card {
+            background-color: rgba(30, 30, 30, 0.8);
+            border: 1px solid gold;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center; /* Center the text in nav cards */
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .section-wrapper {
+            background-color: rgba(0, 0, 0, 0.8); /* Solid background for sections */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 90%; /* Limit width for better readability */
+        }
+
+        .icon {
+            margin-right: 10px; /* Space between icon and text */
+            color: gold; /* Icon color */
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <p>IGS 4101 - CRITICAL THINKING AND COMMUNICATION SKILLS CAPSTONE PROJECT</p>
+    </div>
+    <header>
+        <h1>Paul Kingori</h1>
+        <h2>Innovative Computer Scientist | Passionate Developer | Lifelong Learner</h2>
+        <div class="nav-buttons">
+            <a href="#about" class="nav-button">About</a>
+            <a href="#skills" class="nav-button">Skills</a>
+            <a href="#projects" class="nav-button">Projects</a>
+            <a href="#documents" class="nav-button">Documents</a>
+        </div>
+    </header>
+
+    <section id="about" class="section-wrapper">
+        <h2><i class="fas fa-user icon"></i> About Me</h2>
+        <div class="card">
+            <p>"Focused and dedicated to continuous learning and innovation in the field of computer science."</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section section-wrapper">
+        <h2><i class="fas fa-tools icon"></i> Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fab fa-python fa-3x"></i>
+                <h3>Python</h3>
+                <p>Proficient in building applications and data analysis.</p>
+            </div>
+            <div class="card">
+                <i class="fab fa-html5 fa-3x"></i>
+                <h3>HTML</h3>
+                <p>Expert in crafting semantic and accessible web pages.</p>
+            </div>
+            <div class="card">
+                <i class="fab fa-css3-alt fa-3x"></i>
+                <h3>CSS</h3>
+                <p>Skilled in designing responsive and visually appealing layouts.</p>
+            </div>
+            <div class="card">
+                <i class="fab fa-js fa-3x"></i>
+                <h3>JavaScript</h3>
+                <p>Experienced in creating dynamic web applications.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-database fa-3x"></i>
+                <h3>SQL</h3>
+                <p>Proficient in database management and queries.</p>
+            </div>
+            <div class="card">
+                <i class="fab fa-java fa-3x"></i>
+                <h3>Java</h3>
+                <p>Skilled in object-oriented programming and application development.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud fa-3x"></i>
+                <h3>Cloud Computing</h3>
+                <p>Familiar with cloud services and deployment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section section-wrapper">
+        <h2><i class="fas fa-project-diagram icon"></i> Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>E-Commerce Website</h3>
+                <p>A full-stack application for online shopping.</p>
+                <a href="https://github.com/kingori999/e-commerce-website" class="button">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Personal Blog</h3>
+                <p>A blog site built with React and Node.js.</p>
+                <a href="https://github.com/kingori999/personal-blog" class="button">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Data Visualization Tool</h3>
+                <p>An interactive dashboard for data analysis.</p>
+                <a href="https://github.com/kingori999/data-visualization-tool" class="button">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Chat Application</h3>
+                <p>A real-time messaging application using WebSocket.</p>
+                <a href="https://github.com/kingori999/chat-application" class="button">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="documents" class="documents-section section-wrapper">
+        <h2><i class="fas fa-file icon"></i> Documents</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Resume</h3>
+                <p>An up-to-date resume in Kiswahili, English, and one indigenous African language.</p>
+                <a href="https://docs.google.com/document/d/1kSR6jW5oz2uL8GYQ6INyrtBDDwyhEUVj/edit?usp=drive_link" class="button">View Document</a>
+            </div>
+            <div class="card">
+                <h3>Autobiographical Essay</h3>
+                <p>An autobiographical essay detailing my journey and experiences.</p>
+                <a href="https://docs.google.com/document/d/1Xfa-JgzVHv9_U8qZi26TozeGhDq7HTUN/edit?usp=drive_link" class="button">View Document</a>
+            </div>
+            <div class="card">
+                <h3>Autobiographical Presentation</h3>
+                <p>A PowerPoint presentation on my autobiographical essay.</p>
+                <a href="https://docs.google.com/presentation/d/1t4J4W4wm_HTWGtgn_EPlKAcIrfOEN5Zo/edit?usp=drive_link" class="button">View Presentation</a>
+            </div>
+            <div class="card">
+                <h3>Video Presentation: Innovation</h3>
+                <p>A presentation on an invention or innovation in my field of study.</p>
+                <a href="https://docs.google.com/document/d/1Vs9b6eNWFd_036W9N5qZZcZ8tGarN3JD/edit?usp=drive_link" class="button">View Document</a>
+                <a href="https://link-to-video.com" class="button">View Video</a>
+            </div>
+            <div class="card">
+                <h3>PowerPoint on Innovation</h3>
+                <p>A PowerPoint presentation on an invention or innovation in my field.</p>
+                <a href="https://docs.google.com/presentation/d/19kLSnD5o8QDhRqdPUysTS3kSKGtQfXs8/edit?usp=drive_link" class="button">View Presentation</a>
+            </div>
+            <div class="card">
+                <h3>Video Presentation: African Culture</h3>
+                <p>A presentation on the importance of gender awareness in African society.</p>
+                <a href="https://docs.google.com/document/d/1reAS5rBPg5F1QvANBtQiwGpXgM_grEfg/edit?usp=drive_link" class="button">View Document</a>
+                <a href="https://link-to-video.com" class="button">View Video</a>
+            </div>
+            <div class="card">
+                <h3>PowerPoint on Culture</h3>
+                <p>A PowerPoint presentation on African culture's significance.</p>
+                <a href="https://docs.google.com/presentation/d/1vrM4zQpahKHan3H50UHys0tVqCTU7udd/edit?usp=drive_link" class="button">View Presentation</a>
+            </div>
+            <div class="card">
+                <h3>Video Presentation: Modern Society</h3>
+                <p>A presentation on challenges facing modern society and suggested solutions.</p>
+                <a href="https://docs.google.com/document/d/1Xev1Djfy1ZqOlc-CO7An-wBuEBPcHReU/edit?usp=drive_link" class="button">View Document</a>
+                <a href="https://link-to-video.com" class="button">View Video</a>
+            </div>
+            <div class="card">
+                <h3>Photographic Essay</h3>
+                <p>A photographic essay on important issues in the African community.</p>
+                <a href="https://docs.google.com/document/d/1dWVUdXBEGZOHpA_Ia_FIkHrpVVJQKTT0/edit?usp=drive_link" class="button">View Document</a>
+            </div>
+            <div class="card">
+                <h3>Online Presence</h3>
+                <p>Evidence of professional relevance through various online platforms.</p>
+                <a href="https://docs.google.com/document/d/1xQ-Hdy1R_7lMfCQeuHeTJaRRUG7Ob_62/edit?usp=drive_link" class="button">View Document</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact Information:</p>
+        <p>Phone: +254723930556 | Email: kingxly17@gmail.com</p>
+        <p>
+            <a href="https://github.com/kingori999" style="color: gold;">GitHub</a> | 
+            <a href="https://linkedin.com/in/yourprofile" style="color: gold;">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
